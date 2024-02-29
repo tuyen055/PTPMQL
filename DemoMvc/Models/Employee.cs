@@ -1,7 +1,7 @@
 namespace DemoMvc.Models{
-    public class Employee{
+    public class Employee : Person{
         public String EmployeeID { get; set; }
-        public String FullName { get; set; }
+        public String EmployeeName { get; set; }
         public int Tuoi { get; set; }
         public float Luong { get; set; }
     }

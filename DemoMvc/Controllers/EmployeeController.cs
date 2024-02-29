@@ -9,8 +9,8 @@ public class EmployeeController : Controller{
     }
     [HttpPost]
 
-    public IActionResult Index(string MaNV, string TenNV, int Tuoi, float Luong){
-            String str = "Mã Nhân Viên: " + MaNV + " - Tên Nhân Viên: " + TenNV.ToUpper() + " -  Tuổi: " + Tuoi + " - Lương: "+ Luong;
+    public IActionResult Index(Employee emp){
+            String str = "Mã Nhân Viên: " + emp.EmployeeID + " - Tên Nhân Viên: " + emp.EmployeeName.ToUpper() + " -  Tuổi: " + emp.Tuoi + " - Lương: "+ emp.Luong;
         ViewBag.A = str;
         return View();
     }
