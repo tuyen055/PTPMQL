@@ -1,6 +1,10 @@
-@{
-    ViewData["Title"] = "Index";
-}
-<h1>Index</h1>
-
-<h2>Hello world</h2>
+<form asp-action="Index">
+    <h1>Dữ liệu gửi từ controller về là: @ViewBag.TB</h1>
+    <label>Nhập PersonID:</label>
+    <input type="text" name="PersonID"/>
+    <label>Nhập họ tên:</label>
+    <input type="text" name="FullName"/>
+    <label>Nhập địa chỉ:</label>
+    <input type="text" name="Address"/>
+    <input type="submit" value="Gửi dữ liệu">
+</form>

@@ -10,9 +10,11 @@ public class PersonController : Controller
     {
         return View();
     }
-
-    public IActionResult Welcome()
+    [HttpPost]
+    public IActionResult Index(Person ps)
     {
+        string str = "Xin chào " + ps.PersonID + "-" + ps.FullName + "-" + ps.Address;
+        ViewBag.TB = str;
         return View();
     }
 }
